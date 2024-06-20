@@ -1,28 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bienes Raices</title>
-    <link rel="stylesheet" href="build/css/app.css">
-</head>
-<body>
-    <header class="header">
-    <div class="contenido contenido-header"> 
-        <div class="barra">
-            <a href="/">
-                <img src="build/img/logo.svg" alt="logo de bienes raices">
-            </a>
-            <nav class="navegacion">
-                <a href="nosotros.html">Nosotros</a>
-                <a href="anuncios.html">Anuncios</a>
-                <a href="blog.html">Blog</a>
-                <a href="contacto.html">Contacto</a>
-            </nav>
-        </div>
-    </div> <!--Cierre de Barra-->
-    <h1>Venta de Casas y Departamentos Exclusivos</h1>
-    </header>
+<?php
+
+require 'includes/funciones.php'; 
+
+    
+    incluirtemplate('header');
+?>
+
     <main class="contenedor seccion">
         <h1>Contacto</h1>
         <picture>
@@ -51,7 +34,7 @@
                 <legend>Informacion Sobre la Propiedad</legend>
                 <label for="opciones">Vende o Compra:</label>
                 <select id="opciones">
-                    <option value="" disabled selected>-- Seleccione --</option>
+                    <option value=" disabled selected>-- Seleccione --</option>
                     <option value="Compra">Compra</option>
                     <option value="Vende">Vende</option>
                 </select>
@@ -60,30 +43,24 @@
             </fieldset>
             <fieldset>
                 <legend>Informacion de la Propiedad</legend>
-                <p>Como desea ser Contactado</p>
+                <p>Como desea ser Contactado:</p>
                 <div class="forma-contacto">
                     <label for="contactar-telefono">Teléfono</label>
                     <input name="contacto" type="radio" value="telefono" id="contactar-telefono">
                     <label for="contactar-email">Correo Electrónico</label>
                     <input name="contacto" type="radio" value="email" id="contactar-email">
                 </div>
+                <p>Si ha elegido teléfono, elija fecha y hora para que lo contactemos</p>  
+                <label for="fecha">Fecha</label>
+                <input type="date" id="fecha">
+
+                <label for="hora">Hora:</label>
+                <input type="time" id="hora" min="08:30" max="18:00">
             </fieldset>
+            <input type="submit" value="Enviar" class="boton-verde">
         </form>
      </main>
-     <footer class="footer seccion">
-        <div class="contenedor contenedor-footer">
-            <nav class="navegacion">
-                <a href="nosotros.html">Nosotros</a>
-                <a href="anuncios.html">Anuncios</a>
-                <a href="blog.html">Blog</a>
-                <a href="contacto.html">Contacto</a>
-            </nav>
-        </div>
-        <p class="copyright">Todos los derechos reservados 2023 &copy;</p>
-     </footer>
-
-    <script src="build/js/bundle.min.js">
-
-    </script>
-</body>
-</html>
+     <?php
+   
+   incluirtemplate('footer');
+   ?>

@@ -34,14 +34,15 @@
             margin-top: 0;
         }
     }
-    h4{
+    h4 {
         margin: 0;
         line-height: 1.4;
-        &::after{
+
+        &::after {
             content: '';
             display: block;
             width: 15rem;
-            height: 1rem;
+            height: .5rem;
             background-color: $verde;
             margin-top: 1rem;
         }

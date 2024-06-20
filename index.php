@@ -1,28 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bienes Raices</title>
-    <link rel="stylesheet" href="build/css/app.css">
-</head>
-<body>
-    <header class="header inicio">
-    <div class="contenido contenido-header"> 
-        <div class="barra">
-            <a href="/">
-                <img src="build/img/logo.svg" alt="logo de bienes raices">
-            </a>
-            <nav class="navegacion">
-                <a href="nosotros.html">Nosotros</a>
-                <a href="anuncios.html">Anuncios</a>
-                <a href="blog.html">Blog</a>
-                <a href="contacto.html">Contacto</a>
-            </nav>
-        </div>
-    </div> <!--Cierre de Barra-->
-    <h1>Venta de Casas y Departamentos Exclusivos de Lujo</h1>
-    </header>
+<?php
+
+
+require 'includes/funciones.php'; 
+
+    
+    incluirtemplate('header',$inicio=true);
+?>
+
     <main class="contenedor seccion">
         <h1>Sobre Nosotros</h1>
         <div class="iconos-nosotros">
@@ -60,15 +44,15 @@
                 <p class="precio">5.000.000</p>
                 <ul class="iconos-caracteristicas">
                     <li>
-                        <img  loading="lazy" src="build/img/icono_wc.svg" alt="icono wc">
+                        <img class="iconos-precio"  loading="lazy" src="build/img/icono_wc.svg" alt="icono wc">
                         <p>3</p>
                     </li>
                     <li>
-                        <img  loading="lazy" src="build/img/icono_estacionamiento.svg" alt="icono estacionamiento">
+                        <img class="iconos-precio" loading="lazy" src="build/img/icono_estacionamiento.svg" alt="icono estacionamiento">
                         <p>3</p>
                     </li>
                     <li>
-                        <img  loading="lazy" src="build/img/icono_dormitorio.svg" alt="icono habitaciones">
+                        <img class="iconos-precio" loading="lazy" src="build/img/icono_dormitorio.svg" alt="icono habitaciones">
                         <p>4</p>
                     </li>
                 </ul>
@@ -89,15 +73,15 @@
                 <p class="precio">12.000.000</p>
                 <ul class="iconos-caracteristicas">
                     <li>
-                        <img  loading="lazy" src="build/img/icono_wc.svg" alt="icono wc">
+                        <img class="iconos-precio"  loading="lazy" src="build/img/icono_wc.svg" alt="icono wc">
                         <p>3</p>
                     </li>
                     <li>
-                        <img  loading="lazy" src="build/img/icono_estacionamiento.svg" alt="icono estacionamiento">
+                        <img class="iconos-precio" loading="lazy" src="build/img/icono_estacionamiento.svg" alt="icono estacionamiento">
                         <p>3</p>
                     </li>
                     <li>
-                        <img  loading="lazy" src="build/img/icono_dormitorio.svg" alt="icono habitaciones">
+                        <img class="iconos-precio" loading="lazy" src="build/img/icono_dormitorio.svg" alt="icono habitaciones">
                         <p>4</p>
                     </li>
                 </ul>
@@ -118,15 +102,15 @@
                 <p class="precio">9.000.000</p>
                 <ul class="iconos-caracteristicas">
                     <li>
-                        <img  loading="lazy" src="build/img/icono_wc.svg" alt="icono wc">
+                        <img class="iconos-precio" loading="lazy" src="build/img/icono_wc.svg" alt="icono wc">
                         <p>3</p>
                     </li>
                     <li>
-                        <img  loading="lazy" src="build/img/icono_estacionamiento.svg" alt="icono estacionamiento">
+                        <img class="iconos-precio" loading="lazy" src="build/img/icono_estacionamiento.svg" alt="icono estacionamiento">
                         <p>3</p>
                     </li>
                     <li>
-                        <img  loading="lazy" src="build/img/icono_dormitorio.svg" alt="icono habitaciones">
+                        <img class="iconos-precio" loading="lazy" src="build/img/icono_dormitorio.svg" alt="icono habitaciones">
                         <p>4</p>
                     </li>
                 </ul>
@@ -206,20 +190,7 @@
         </section>
      </div>
 
-     <footer class="footer seccion">
-        <div class="contenedor contenedor-footer">
-            <nav class="navegacion">
-                <a href="nosotros.html">Nosotros</a>
-                <a href="anuncios.html">Anuncios</a>
-                <a href="blog.html">Blog</a>
-                <a href="contacto.html">Contacto</a>
-            </nav>
-        </div>
-        <p class="copyright">Todos los derechos reservados 2023 &copy;</p>
-     </footer>
-
-    <script src="build/js/bundle.min.js">
-
-    </script>
-</body>
-</html>
+     <?php
+   
+   incluirtemplate('footer');
+   ?>
